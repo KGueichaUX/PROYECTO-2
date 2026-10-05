@@ -1,0 +1,32 @@
+/* Estilos para la Pantalla de login */
+
+/* Tipografía para proyecto */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #9E74F2; 
+    min-height: 100vh; 
+    display: flex; 
+    align-items: center;
+}
+
+.titulo-inicio-sesion {
+    color: #64748b;
+}
+
+.login-card { 
+    border: none; border-radius: 15px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+}
+
+     
+.btn-primary { 
+    background-color: #9E74F2; 
+    border: none; 
+}
+
+       
+.btn-primary:hover { 
+    background-color: #8e59f9; 
+}

@@ -1,0 +1,39 @@
+/* Estilos para la Pantalla de transacciones */
+
+/* Tipografía para proyecto */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+body { 
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #9E74F2;
+}
+   
+.titulo-movimientos{
+    color: #64748b;
+}
+.custom-card {
+    border: none;
+    border-radius: 15px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+}
+       
+.btn-primary{
+    background-color: #9E74F2;
+    border-color: #8e59f9;
+}
+.btn-primary:hover{
+    background-color: #8e59f9
+}
+
+.list-group-item { 
+    border-left: 4px solid transparent; 
+    transition: background 0.2s; 
+}
+       
+.income { 
+    border-left-color: #198754; 
+}
+       
+.expense { 
+    border-left-color: #dc3545; 
+}

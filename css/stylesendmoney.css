@@ -1,0 +1,41 @@
+/* Estilos para la Pantalla de envio de dinero */
+
+/* Tipografía para proyecto */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+body { 
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #9E74F2;
+}
+       
+.custom-card { 
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.titulo-enviardinero{
+    color: #64748b;
+}
+
+.btn-cancelar{
+     color: #9E74F2;
+}
+
+.btn-primary{
+    background-color: #9E74F2;
+    border-color: #8e59f9;
+}
+
+.btn-primary:hover{
+    background-color: #8e59f9
+}
+
+.btn-outline-primary{
+    color: #9E74F2;
+    border-color: #8e59f9;
+}
+.d-grid .btn-outline-primary:hover {
+    background-color: #8e59f9
+    
+}

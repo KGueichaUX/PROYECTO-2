@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alke Wallet - Enviar Dinero</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/stylesendmoney.css">
+</head>
+<body>
+
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card custom-card p-4 bg-white">
+                <div class="card-body">
+                    <h2 class="titulo-enviardinero fw-bold mb-4 text-center">Enviar Dinero</h2>
+                    
+                    <form class="mb-4">
+                        <label class="form-label fw-semibold">Buscar en la agenda de transferencias</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Nombre, email o alias...">
+                            <button class="btn btn-primary px-4 fw-bold" type="button">Buscar</button>
+                        </div>
+                    </form>
+
+                    <div class="d-grid gap-2 mb-4">
+                        <button type="button" class="btn btn-outline-primary fw-semibold" data-bs-toggle="modal" data-bs-target="#newContactModal">
+                            + Agregar nuevo contacto
+                        </button>
+                    </div>
+
+                    <hr class="text-muted">
+                    <div class="text-center mt-3">
+                         <a href="menu.html" class="btn btn-cancelar ">Cancelar y volver</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="newContactModal" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content style-radius border-0 shadow">
+      <div class="modal-header border-0 pb-0">
+        <h5 class="modal-title fw-bold" id="modalTitle">Nuevo Contacto</h5>
+        <button type="button" class="btn-close" data-bs-shadow="none" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="contact-name" class="form-label small fw-semibold">Nombre Completo</label>
+            <input type="text" class="form-control" id="contact-name" required>
+          </div>
+          <div class="mb-3">
+            <label for="contact-email" class="form-label small fw-semibold">Correo Electrónico</label>
+            <input type="email" class="form-control" id="contact-email" required>
+          </div>
+          <div class="mb-3">
+            <label for="contact-bank" class="form-label small fw-semibold">Banco / Institución</label>
+            <input type="text" class="form-control" id="contact-bank">
+          </div>
+          <div class="d-grid gap-2 mt-4">
+              <button type="button" class="btn btn-primary fw-bold" data-bs-dismiss="modal">Guardar contacto</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
