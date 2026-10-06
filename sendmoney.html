@@ -14,13 +14,32 @@
         <div class="col-md-6">
             <div class="card custom-card p-4 bg-white">
                 <div class="card-body">
-                    <h2 class="titulo-enviardinero fw-bold mb-4 text-center">Enviar Dinero</h2>
-                    
-                    <form class="mb-4">
+                    <h2 class="titulo-enviardinero fw-bold mb-2 text-center">Enviar Dinero</h2>
+                    <p class="text-center text-muted mb-4">
+                        Saldo actual: <strong id="currentBalance">$0</strong>
+                    </p>
+
+                    <div id="alertBox" class="d-none" role="alert"></div>
+
+                    <form id="searchForm" class="mb-3">
                         <label class="form-label fw-semibold">Buscar en la agenda de transferencias</label>
                         <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Nombre, email o alias...">
-                            <button class="btn btn-primary px-4 fw-bold" type="button">Buscar</button>
+                            <input type="text" id="searchInput" class="form-control" placeholder="Nombre, email o alias...">
+                            <button id="searchBtn" class="btn btn-primary px-4 fw-bold" type="button">Buscar</button>
+                        </div>
+                    </form>
+
+                    <div id="contactList" class="list-group mb-3"></div>
+
+                    <form id="sendForm" class="d-none border rounded p-3 mb-3">
+                        <p class="mb-2">Enviar a: <strong id="selectedName"></strong></p>
+                        <label for="amount" class="form-label fw-semibold">Monto (CLP)</label>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">$</span>
+                            <input type="number" class="form-control" id="amount" min="1" step="1" required>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary fw-bold">Enviar dinero</button>
                         </div>
                     </form>
 
@@ -32,7 +51,7 @@
 
                     <hr class="text-muted">
                     <div class="text-center mt-3">
-                         <a href="menu.html" class="btn btn-cancelar ">Cancelar y volver</a>
+                         <a href="menu.html" class="btn btn-cancelar">Cancelar y volver</a>
                     </div>
                 </div>
             </div>
@@ -45,10 +64,11 @@
     <div class="modal-content style-radius border-0 shadow">
       <div class="modal-header border-0 pb-0">
         <h5 class="modal-title fw-bold" id="modalTitle">Nuevo Contacto</h5>
-        <button type="button" class="btn-close" data-bs-shadow="none" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form>
+        <div id="contactError" class="alert alert-danger d-none" role="alert"></div>
+        <form id="newContactForm">
           <div class="mb-3">
             <label for="contact-name" class="form-label small fw-semibold">Nombre Completo</label>
             <input type="text" class="form-control" id="contact-name" required>
@@ -62,7 +82,7 @@
             <input type="text" class="form-control" id="contact-bank">
           </div>
           <div class="d-grid gap-2 mt-4">
-              <button type="button" class="btn btn-primary fw-bold" data-bs-dismiss="modal">Guardar contacto</button>
+              <button type="submit" class="btn btn-primary fw-bold">Guardar contacto</button>
           </div>
         </form>
       </div>
@@ -71,5 +91,7 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="./js/wallet.js"></script>
+<script src="./js/sendmoney.js"></script>
 </body>
 </html>
